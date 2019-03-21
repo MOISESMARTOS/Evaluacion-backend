@@ -36,19 +36,21 @@ function playVideoOnScroll(){
     .scroll((event)=>{
       var scrollActual = $(window).scrollTop();
       if (scrollActual > ultimoScroll){
-       video.play();
+       //video.play();
      } else {
         //this.rewind(1.0, video, intervalRewind);
-        video.play();
+        //video.play();
      }
      ultimoScroll = scrollActual;
     })
     .scrollEnd(()=>{
-      video.pause();
+    //  video.pause();
     }, 10)
 }
 
-
+$(document).ready(function(){
+  $('select').material_select();
+});
 
 inicializarSlider();
 playVideoOnScroll();
