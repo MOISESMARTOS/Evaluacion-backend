@@ -13,7 +13,7 @@
                                   </div>';
   foreach ($data as $key => $value) {
     $ciudades[$key]=$value['Ciudad'];
-    $tipos[$key]=$value["Tipo"];
+    $tipos[$key]=$value['Tipo'];
 
     $response[$key] = '<div class="itemMostrado card">
                           <img src="img/home.jpg">
@@ -23,7 +23,7 @@
                             <span><strong>&nbsp;&nbsp;&nbsp;Telefono: </strong>'.$value['Telefono'].'</span><br />
                             <span><strong>&nbsp;&nbsp;&nbsp;Codigo Postal: </strong>'.$value['Codigo_Postal'].'</span><br />
                             <span><strong>&nbsp;&nbsp;&nbsp;Tipo: </strong>'.$value['Tipo'].'</span><br />
-                            <span><strong>&nbsp;&nbsp;&nbsp;Precio: </strong> <span class="PrecioTexto">'.$value['Precio'].'</span></span><br /><br />
+                            <span><strong>&nbsp;&nbsp;&nbsp;Precio : </strong> <span class="precioTexto">'.$value['Precio'].'</span></span><br /><br />
                             <div class="divider"></div>
                             <div class="card-action">VER MAS</div>
                           </div>

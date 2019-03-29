@@ -21,14 +21,14 @@
   $precio_i = intval($precio[0]);
   $precio_f = intval($precio[1]);
 
-  if ($ciuddad !=null && tipo != null) {
+  if ($ciudad !=null && $tipo != null) {
     foreach ($data as $key => $value) {
       $arreglar = array("$",",");
       $valor = str_replace($arreglar,"",$value['Precio']);
-      $valor intval($valor);
+      $valor = intval($valor);
 
       if ($precio_i <= $valor && $valor <= $precio_f) {
-        if ($ciudad == $value['Ciudad' && $tipo == $value['Tipo']]) {
+        if ($ciudad == $value['Ciudad'] && $tipo == $value['Tipo']) {
           $response[$key] = '<div class="itemMostrado card">
                                 <img src="img/home.jpg">
                                 <div class="card-stacked">
@@ -37,7 +37,7 @@
                                   <span><strong>&nbsp;&nbsp;&nbsp;Telefono: </strong>'.$value['Telefono'].'</span><br />
                                   <span><strong>&nbsp;&nbsp;&nbsp;Codigo Postal: </strong>'.$value['Codigo_Postal'].'</span><br />
                                   <span><strong>&nbsp;&nbsp;&nbsp;Tipo: </strong>'.$value['Tipo'].'</span><br />
-                                  <span><strong>&nbsp;&nbsp;&nbsp;Precio: </strong> <span class="PrecioTexto">'.$value['Precio'].'</span></span><br /><br />
+                                  <span><strong>&nbsp;&nbsp;&nbsp;Precio: </strong><span class="precioTexto">'.$value['Precio'].'</span></span><br /><br />
                                   <div class="divider"></div>
                                   <div class="card-action">VER MAS</div>
                                 </div>
@@ -49,9 +49,9 @@
     foreach ($data as $key => $value) {
       $arreglar = array("$",",");
       $valor = str_replace($arreglar,"",$value['Precio']);
-      $valor intval($valor);
+      $valor = intval($valor);
 
-      if ($precio_i <= $precio && $precio <= $precio_f) {
+      if ($precio_i <= $valor && $valor <= $precio_f) {
         if ($ciudad == null) {
           if ($tipo == $value['Tipo']) {
             $response[$key] = '<div class="itemMostrado card">
@@ -62,7 +62,7 @@
                                     <span><strong>&nbsp;&nbsp;&nbsp;Telefono: </strong>'.$value['Telefono'].'</span><br />
                                     <span><strong>&nbsp;&nbsp;&nbsp;Codigo Postal: </strong>'.$value['Codigo_Postal'].'</span><br />
                                     <span><strong>&nbsp;&nbsp;&nbsp;Tipo: </strong>'.$value['Tipo'].'</span><br />
-                                    <span><strong>&nbsp;&nbsp;&nbsp;Precio: </strong> <span class="PrecioTexto">'.$value['Precio'].'</span></span><br /><br />
+                                    <span><strong>&nbsp;&nbsp;&nbsp;Precio: </strong> <span class="precioTexto">'.$value['Precio'].'</span></span><br /><br />
                                     <div class="divider"></div>
                                     <div class="card-action">VER MAS</div>
                                   </div>
@@ -78,7 +78,7 @@
                                     <span><strong>&nbsp;&nbsp;&nbsp;Telefono: </strong>'.$value['Telefono'].'</span><br />
                                     <span><strong>&nbsp;&nbsp;&nbsp;Codigo Postal: </strong>'.$value['Codigo_Postal'].'</span><br />
                                     <span><strong>&nbsp;&nbsp;&nbsp;Tipo: </strong>'.$value['Tipo'].'</span><br />
-                                    <span><strong>&nbsp;&nbsp;&nbsp;Precio: </strong> <span class="PrecioTexto">'.$value['Precio'].'</span></span><br /><br />
+                                    <span><strong>&nbsp;&nbsp;&nbsp;Precio: </strong> <span class="precioTexto">'.$value['Precio'].'</span></span><br /><br />
                                     <div class="divider"></div>
                                     <div class="card-action">VER MAS</div>
                                   </div>
@@ -91,9 +91,9 @@
     foreach ($data as $key => $value) {
       $arreglar = array("$",",");
       $valor = str_replace($arreglar,"",$value['Precio']);
-      $valor intval($valor);
+      $valor = intval($valor);
 
-      if ($precio_i <= $precio && $precio <= $precio_f) {
+      if ($precio_i <= $valor && $valor <= $precio_f) {
         $response[$key] = '<div class="itemMostrado card">
                               <img src="img/home.jpg">
                               <div class="card-stacked">
@@ -102,7 +102,7 @@
                                 <span><strong>&nbsp;&nbsp;&nbsp;Telefono: </strong>'.$value['Telefono'].'</span><br />
                                 <span><strong>&nbsp;&nbsp;&nbsp;Codigo Postal: </strong>'.$value['Codigo_Postal'].'</span><br />
                                 <span><strong>&nbsp;&nbsp;&nbsp;Tipo: </strong>'.$value['Tipo'].'</span><br />
-                                <span><strong>&nbsp;&nbsp;&nbsp;Precio: </strong> <span class="PrecioTexto">'.$value['Precio'].'</span></span><br /><br />
+                                <span><strong>&nbsp;&nbsp;&nbsp;Precio: </strong> <span class="precioTexto">'.$value['Precio'].'</span></span><br /><br />
                                 <div class="divider"></div>
                                 <div class="card-action">VER MAS</div>
                               </div>
