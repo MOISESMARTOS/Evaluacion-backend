@@ -21,6 +21,8 @@
   $precio_i = intval($precio[0]);
   $precio_f = intval($precio[1]);
 
+
+//Logica de filtrado por ciudad, por tipo o ambos
   if ($ciudad !=null && $tipo != null) {
     foreach ($data as $key => $value) {
       $arreglar = array("$",",");

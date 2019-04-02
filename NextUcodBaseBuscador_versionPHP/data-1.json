@@ -898,5 +898,14 @@
 		"Codigo_Postal": "598072",
 		"Tipo": "Casa",
 		"Precio": "$42,804"
+	},
+	{
+		"Id": 101,
+		"Direccion": "P.O. Box 444, 4652 Pint avenue",
+		"Ciudad": "Washington",
+		"Telefono": "123-456-7890",
+		"Codigo_Postal": "598072",
+		"Tipo": "Casa",
+		"Precio": "$42,804"
 	}
 ]

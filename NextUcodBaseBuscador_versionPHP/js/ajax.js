@@ -6,9 +6,8 @@ function mostrarTodos(event){
   event.preventDefault();
   $(".colContenido").html(itemMostrado);
 }
-
+//llamado a cargar datos
 function datos(){
-  console.log('probando')
   $.ajax({
     data: "",
     url: "./php/lib.php",
@@ -18,32 +17,19 @@ function datos(){
       tituloContenido = response.tituloContenido;
       ciudad = response.ciudades;
       tipos = response.tipos;
-
       filtrosInit(ciudad, tipos);
-      for (var i = 0; i < 100; i++) {
+      var long = Object.keys(response);
+      for (var i = 0; i < long.length; i++) {
         itemMostrado[i] = response[i];
       }
     }
   });
 }
 
-
+//Cargar items del filtrado
 function filtrosInit(city, type){
-  var filtro1 = JSON.stringify(city);
-  var filtro2 = JSON.stringify(type);
-
-  var largo1 = filtro1.length-2;
-  var largo2 = filtro2.length-2;
-
-  filtro1 = filtro1.substr(1,largo1);
-  filtro2 = filtro2.substr(1,largo2);
-
-  filtro1 = filtro1.replace(/['"]+/g, '');
-  filtro2 = filtro2.replace(/['"]+/g, '');
-
-  filtro1 = filtro1.split(',');
-  filtro2 = filtro2.split(',');
-
+var filtro1 = city;
+var filtro2 = type;
   $('#selectCiudad').append('<option value="'+filtro1[0]+'">'+filtro1[0]+'</option>',
                             '<option value="'+filtro1[1]+'">'+filtro1[1]+'</option>',
                             '<option value="'+filtro1[2]+'">'+filtro1[2]+'</option>',
@@ -59,12 +45,12 @@ function filtrosInit(city, type){
   $("select").material_select('update');
 }
 
+//enviar datos de filtrado
 function envio_de_datos(){
   var ciudad = $('#selectCiudad').val();
   var tipo = $('#selectTipo').val();
   var rango = $('#rangoPrecio').val();
   var filtro= 'ciudad='+ciudad +'&tipo='+tipo+'&precio='+rango;
-  console.log(filtro)
   $.ajax({
       type: "post",
       url: "./php/buscador.php",
